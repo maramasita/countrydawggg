@@ -1,0 +1,29 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "2088 marathon",
+        "price": 23.00,
+        "image": "./img/product1.png",
+        "sizes": ["S", "M", "L", "XL"],
+        "description": "• 280GSM\n• Screen printed\n• Cropped but not too cropped fitting"
+      },
+      {
+        "id": 2,
+        "name": "vincè vice captain division ll",
+        "price": 32.00,
+        "image": "./img/product2.png",
+        "sizes": ["S", "M", "L", "XL"],
+        "description": "• 400GSM\n• French terry fabric\n• Screen printed\n• Soft washed\n• Cropped fitting"
+      },
+      {
+        "id": 3,
+        "name": "brook captain division ll",
+        "price": 23.00,
+        "image": "./img/product3.png",
+        "sizes": ["S", "M", "L", "XL"],
+        "description": "• 250GSM\n• Screen printed\n• Cropped but not too cropped fitting"
+      }
+    ]
+  }
+  

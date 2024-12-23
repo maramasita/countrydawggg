@@ -1,0 +1,169 @@
+
+  
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in total width and height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background for the body */
+    color: #fff; /* White text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+.container {
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 40px auto; /* Center the container with space above and below */
+    padding: 20px; /* Padding inside the container */
+    background-color: #1a1a1a; /* Darker background for contrast */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1); /* Soft shadow for depth */
+}
+
+h2 {
+    text-align: center; /* Center the heading */
+    color: #ff00ff; /* Pink color for the heading */
+    font-size: 2.5em; /* Large font size for prominence */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.checkout {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the columns */
+    margin-top: 20px; /* Space above the checkout section */
+}
+
+.contact,
+.order-summary {
+    background-color: #222; /* Dark background for sections */
+    padding: 20px; /* Padding inside sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.contact:hover,
+.order-summary:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* Enhanced shadow on hover */
+}
+
+.contact {
+    flex: 0 0 65%; /* Use flex properties for better responsiveness */
+}
+
+.order-summary {
+    flex: 0 0 30%; /* Use flex properties for better responsiveness */
+}
+
+h3 {
+    color: #ff00ff; /* Pink color for subheadings */
+    margin-bottom: 15px; /* Space below subheading */
+}
+
+label {
+    display: block; /* Labels on new lines */
+    margin-bottom: 5px; /* Space below label */
+    color: #fff; /* White color for labels */
+}
+
+form input,
+form select {
+    width: 100%; /* Full width for inputs */
+    padding: 12px; /* Padding inside inputs */
+    margin: 10px 0; /* Space above and below inputs */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #333; /* Dark background for inputs */
+    color: #fff; /* White text color */
+    transition: border 0.3s ease; /* Smooth transition for border */
+}
+
+form input.error,
+form select.error {
+    border: 2px solid red; /* Red border for error state */
+}
+
+form input:focus,
+form select:focus {
+    border: 1px solid #ff00ff; /* Pink border on focus */
+    outline: none; /* Remove outline */
+}
+
+.confirm-button {
+    width: 100%; /* Full width for button */
+    padding: 12px; /* Padding inside button */
+    background-color: #ff00ff; /* Pink background for button */
+    color: #fff; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.2em; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transition effects */
+}
+
+.confirm-button:hover {
+    background-color: #cc00cc; /* Darker pink on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.order-summary h2 {
+    color: #ff00ff; /* Pink color for order summary heading */
+    font-size: 1.8em; /* Font size for heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.cart-item {
+    display: flex; /* Use flexbox for cart items */
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 15px; /* Space below each cart item */
+    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.cart-item:hover {
+    transform: scale(1.02); /* Scale up effect on hover */
+}
+
+.cart-item img {
+    width: 80px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space to the right of images */
+    border: 2px solid #fff; /* White border around images */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+.cart-item-details h3 {
+    margin: 0; /* Remove margin for heading */
+    color: #ff00ff; /* Pink color for cart item names */
+}
+
+.total {
+    margin-top: 20px; /* Space above total */
+    font-size: 1.2em; /* Larger font size for total */
+    color: #fff; /* White color for total */
+}
+
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Optional: Add padding for spacing */
+}
+
+header h1 {
+    margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 768px) {
+    .checkout {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+    }
+
+    .contact,
+    .order-summary {
+        width: 100%; /* Full width for sections on smaller screens */
+        margin-bottom: 20px; /* Space below sections */
+    }
+}

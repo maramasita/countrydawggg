@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+   /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text */
+    line-height: 1.6;
+}
+
+/* Header */
+header h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #ff00ff; /* Neon pink for headings */
+    margin-bottom: 20px;
+}
+
+/* Checkout Section */
+.checkout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Customer Information Form */
+.contact {
+    flex: 1;
+    background-color: #282828; /* Darker background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    margin-right: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ff00ff; /* Neon pink */
+    font-weight: bold;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.contact input,
+.contact select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    background-color: #333333;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.contact input:focus,
+.contact select:focus {
+    outline: none;
+    border-color: #ff00ff; /* Neon pink on focus */
+}
+
+/* Save Information Checkbox */
+.contact input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Confirm Button */
+.confirm-button {
+    background-color: #ff00ff; /* Neon pink */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-button:hover {
+    background-color: #ff33ff; /* Slightly lighter pink */
+}
+
+/* Order Summary */
+.order-summary {
+    flex: 1;
+    background-color: #282828; /* Dark background */
+    padding: 30px;
+    border-radius: 8px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.order-summary h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #ff00ff; /* Neon pink */
+    font-weight: bold;
+}
+
+/* Cart Items */
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #444444;
+}
+
+.cart-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.cart-item-details h3 {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.cart-item-details p {
+    font-size: 14px;
+    color: #cccccc; /* Lighter gray for description text */
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ff00ff;
+    text-align: right;
+}
+
+/* Total Section */
+.total {
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.total p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #ff00ff; /* Neon pink for total price */
+}
+
+.total span {
+    font-weight: bold;
+}
+
+/* Shipping Method */
+.shipping-method {
+    background-color: #e6f4ff; /* Light blue background */
+    padding: 18px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.shipping-method p {
+    margin: 0;
+    font-size: 16px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.shipping-method p span {
+    color: #999999; /* Lighter color for the location text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .checkout {
+        flex-direction: column;
+    }
+
+    .contact, .order-summary {
+        margin: 0 0 20px 0;
+    }
+
+    .contact h3, .order-summary h2 {
+        font-size: 24px;
+    }
+
+    .confirm-button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="./img/logo.png" alt="Countrydawgg Logo" >
+        </h1>
+            <a href="index.html" class="home-link" style="color: wheat;">Back to Home</a>  
+     
+    </header>
+    <div class="container">
+        <h2>Checkout</h2>
+    
+        <!-- Checkout layout -->
+        <div class="checkout">
+            <!-- Customer Information Form -->
+            <div class="contact">
+                <h3>Shipping Information</h3>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required placeholder="Full name">
+    
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="email">
+    
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" required placeholder="address">
+
+                <!-- Phone Input -->
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone" required>
+
+
+                <!-- Shipping Method -->
+                <h3>Shipping Method</h3>
+                <div class="shipping-method" style="background-color: #e6f4ff; padding: 15px; border-radius: 5px; margin: 15px 0;">
+                    <p style="margin: 0; color: #333333;">
+                        <strong>Local Delivery (2-3 Days)</strong> - <span style="color: #999999;">Phnom Penh Only $2.00</span>
+                    </p>
+                   
+                </div>
+
+                <!-- Payment Method Dropdown -->
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="cash">Cash</option>
+                    <option value="ABA">ABA</option>
+                </select>
+    
+                <!-- Checkout Button -->
+                <button class="confirm-button" onclick="handleOrder()">Place Order</button>
+            </div>
+            <!-- Cart Summary -->
+            <div class="order-summary">
+                <h2>Your Cart</h2>
+                <!-- Dynamic cart items will be inserted here -->
+                <div id="cart-items"></div>
+    
+                <div class="total">
+                    <p>Delivery: <span id="delivery-fee">$2</span></p>
+                    <p>Total: $<span id="total-price">0</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Retrieve cart from localStorage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        const deliveryFee = 2;
+
+        function populateCart() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            let total = 0;
+
+            cartItems.forEach(item => {
+                const cartItemDiv = document.createElement('div');
+                cartItemDiv.className = 'cart-item';
+
+                cartItemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-details">
+                        <h3>${item.name}</h3>
+                        <p>Size: ${item.size}</p>
+                    </div>
+                    <div class="item-price">$${item.price}</div>
+                `;
+
+                cartItemsContainer.appendChild(cartItemDiv);
+                total += item.price;
+            });
+
+            // Display total price including delivery fee
+            document.getElementById('total-price').textContent = total + deliveryFee;
+        }
+
+        function handleOrder() {
+            const paymentMethod = document.getElementById('payment-method').value;
+            alert(`Order placed successfully! Payment Method: ${paymentMethod}`);
+            window.location.href = 'receipt.html'; // Redirect to order confirmation page
+        }
+
+        // Call populateCart on page load
+        window.onload = populateCart;
+        function handleOrder() {
+            // Get user input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+        
+            // Create user details object
+            const userDetails = {
+                name,
+                email,
+                address,
+                phone,
+                paymentMethod
+            };
+        
+            // Save user details to localStorage
+            localStorage.setItem('userDetails', JSON.stringify(userDetails));
+        
+            // Save cart and delivery fee (already loaded)
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            localStorage.setItem('deliveryFee', deliveryFee);
+        
+            // Redirect to receipt page
+            window.location.href = 'receipt.html';
+        }
+        
+    </script>
+</body>
+</html>
