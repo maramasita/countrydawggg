@@ -465,12 +465,12 @@
     function toggleCart() {
         const cartOverlay = document.getElementById('cart-overlay');
         cartOverlay.classList.toggle('cart-active');
-        renderCartItems(); // Ensure cart is up-to-date when opened
+        renderCartItems(); 
     }
 
     function renderCartItems() {
         const cartItemsElement = document.querySelector('.cart-items');
-        cartItemsElement.innerHTML = ''; // Clear previous items
+        cartItemsElement.innerHTML = '';
 
         if (cart.length === 0) {
             cartItemsElement.innerHTML = '<p>Your cart is empty.</p>';
